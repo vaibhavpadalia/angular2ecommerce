@@ -1,0 +1,18 @@
+body {
+    background-image: url(https://cdn.wallpapersafari.com/75/38/jN3n4O.jpg);
+    width: 99.5%;
+    height: 100%;
+    padding-right: 0px;
+}
+img {
+    height:400px;
+    width: 400px;
+}
+#des1 {
+    font-family: 'Poiret One', cursive;
+    font-size: 25px;
+    color: white;
+    margin-left: 50px;
+    max-width: 700px;
+    max-height: 200px;
+}
