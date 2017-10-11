@@ -43,5 +43,5 @@ export class EditDetailsComponent implements OnInit {
   }
     console.log('after editing', user); /// For Testing purposes only
     localStorage.setItem('data', JSON.stringify(user));
-}
+  }
 }
