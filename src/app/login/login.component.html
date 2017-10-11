@@ -1,24 +1,24 @@
 <style>
-    @import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+    @import url('https://fonts.googleapis.com/css?family=Almendra');
 </style>
 <br><br>
 <div class="container" style="background-color:rgba(9, 135, 238, 0.342) ;">
-<form >
+<form>
     <h1>Login</h1>
     <div class="form-group">
+        <span class="glyphicon glyphicon-envelope"></span>
         <label for="email">Email:</label>
-        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+        <input type="email" class="form-control" id="email" placeholder="Enter email" #email>
     </div>
     <div class="form-group">
+        <span class="glyphicon glyphicon-asterisk"></span>
         <label for="pwd">Password:</label>
-        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+        <input type="password" class="form-control" id="pwd" placeholder="Enter password" #password>
     </div>
-    <div class="checkbox">
-        <label>
-            <input type="checkbox" name="remember"> Remember me
-        </label>
+    <div id="info">
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <br>
+    <button type="button" class="btn btn-primary" (click)="checkData(email.value,password.value)">Submit</button>
 </form>
 <br><br>
 </div>

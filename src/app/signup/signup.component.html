@@ -1,6 +1,38 @@
 <style>
-  @import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+  @import url('https://fonts.googleapis.com/css?family=Aldrich');
 </style>
-<p>
-  signup works!
-</p>
+<body>
+<br>
+<div class="container" style="background-color:rgba(19, 255, 70, 0.192)">
+  <form >
+    <h1>SignUp</h1>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter your name" #name>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" #email>
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone No:</label>
+      <input type="number" class="form-control" id="phone" placeholder="Enter phone no" #phone>
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" #password>
+    </div>
+    <div class="form-group">
+      <label for="dob">Date Of Birth:</label>
+      <input type="date" class="form-control" id="dob" placeholder="Enter date of birth" #dob>
+    </div>
+    <br>
+    <button type="button" class="btn btn-primary" (click)="onSignup(name.value,email.value,password.value, phone.value, dob.value)" >Sign Up</button>
+    <button type="reset" class="btn btn-danger">Clear All</button><br><br>
+    <div id="info"></div>
+    <br>
+  </form>
+  <br>
+</div>
+<br>
+</body>

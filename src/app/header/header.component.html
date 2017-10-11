@@ -7,12 +7,24 @@
   </header>
 <ul>
   <li>
-    <a [routerLink]="['/welcome']">Welcome</a>
+    <a [routerLink]="['/welcome']"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Welcome</a>
+  </li>
+  <ng-template [ngIf]="service.role">
+  <li>
+    <a [routerLink]="['/signin']"><span class="glyphicon glyphicon-log-in"></span>&nbsp;&nbsp;Login</a>
   </li>
   <li>
-    <a [routerLink]="['/signin']">Login</a>
+    <a [routerLink]="['/signup']"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;Signup</a>
   </li>
+  </ng-template>
+  <ng-template [ngIf]="!service.role">
+    <li>
+      <a [routerLink]="['/products']">
+        <span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;&nbsp;Product</a>
+    </li>
   <li>
-    <a [routerLink]="['/signup']">Signup</a>
+    <a [routerLink]="['/welcome']" (click)="doThis()">
+    <span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;Log Out</a>
   </li>
+  </ng-template>
 </ul>

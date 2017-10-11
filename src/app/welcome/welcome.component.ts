@@ -7,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WelcomeComponent implements OnInit {
 
-  constructor() { }
-
+  constructor() {
+    if (JSON.parse(localStorage.getItem('data')) == null) {
+      localStorage.setItem('data', JSON.stringify([]));
+    }
+  }
   ngOnInit() {
   }
 

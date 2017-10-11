@@ -1,0 +1,49 @@
+<body>
+  <br>
+  <div id="des" align="center">
+    <h1 style="color:antiquewhite">Edit Details</h1>
+    <br>
+    <table align="center">
+      <tr>
+        <td>Name</td>
+        <td>:</td>
+        <td>
+          <input type="text" #name>
+        </td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td>:</td>
+        <td>
+          <input type="text" value={{email}} disabled>
+        </td>
+      </tr>
+      <tr>
+        <td>password</td>
+        <td>:</td>
+        <td>
+          <input type="password" #password>
+        </td>
+      </tr>
+      <tr>
+        <td>Date of Birth</td>
+        <td>:</td>
+        <td>
+          <input type="date" #dob>
+        </td>
+      </tr>
+      <tr>
+        <td>Phone No.</td>
+        <td>:</td>
+        <td>
+          <input type="number" #phone>
+        </td>
+      </tr>
+    </table>
+    <br>
+    <button class="btn btn-danger" (click)="updateValues(name.value,password.value,dob.value,phone.value)" >Update</button>
+    <br>
+    <br>
+    <br>
+  </div>
+</body>
