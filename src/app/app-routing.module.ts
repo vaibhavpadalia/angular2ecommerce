@@ -17,7 +17,8 @@ const routes: Routes = [
     { path: 'productdetails', component: ProductDetailsComponent},
     { path: 'productdetails/:p_head/:p_name/:p_price/:p_des/:p_img', component: ProductDetailsComponent},
     { path: 'details', component: UserDetailsComponent},
-    { path: 'edit', component: EditDetailsComponent }
+    { path: 'edit', component: EditDetailsComponent },
+    { path: '**', component: WelcomeComponent}
 ];
 
 @NgModule({

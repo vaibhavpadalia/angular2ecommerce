@@ -22,7 +22,6 @@ export class LoginComponent implements OnInit {
          this.router.navigate(['/products']);
          this.service.role = false;
          this.service.token = email;
-         (<HTMLInputElement>document.getElementById('info')).innerHTML = 'Login Successful !';
       } else {
         (<HTMLInputElement>document.getElementById('info')).innerHTML = 'Login Failed !';
       }
