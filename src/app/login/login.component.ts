@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
   }
   checkData(email: string, password: string) {
     const user = JSON.parse(localStorage.getItem('data'));
-    console.log(user);
+    console.log(user); // Testing Purpose only
     for ( let i = 0; i < user.length ; i++) {
        if (user[i].email === email && user[i].password === password) {
          this.router.navigate(['/products']);

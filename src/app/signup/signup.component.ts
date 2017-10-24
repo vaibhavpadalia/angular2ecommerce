@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
-  userData: any[] = [];
+  user: any[] = [];
   constructor() {
    }
 
@@ -16,7 +16,7 @@ export class SignupComponent implements OnInit {
     let count = 0;
     const user = JSON.parse(localStorage.getItem('data'));
     console.log(user); // Testing purpose only
-    if (user.length === 0 ) {
+    if (user === null ) {
       const abc = { name: name, email: email, password: password, phone: phone, dob: dob };
         user.push(abc);
         localStorage.setItem('data', JSON.stringify(user));
