@@ -11,7 +11,7 @@ export class UserDetailsComponent implements OnInit {
   email: string;
   phone: number;
   password: string;
-  dob: Date;
+  dob: string;
   constructor(private service: GlobalService) {
     const user = JSON.parse(localStorage.getItem('data'));
     for (let i = 0; i < user.length; i++) {

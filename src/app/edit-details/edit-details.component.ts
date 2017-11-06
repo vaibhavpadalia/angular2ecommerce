@@ -15,7 +15,7 @@ export class EditDetailsComponent implements OnInit {
   constructor(private service: GlobalService) {
   }
   ngOnInit() {
-    console.log("in ng on it"); // For Testing purposes only
+    console.log('in ng on it'); // For Testing purposes only
     const user = JSON.parse(localStorage.getItem('data'));
     for (let i = 0; i < user.length; i++) {
       if (this.service.token === user[i].email) {
@@ -34,9 +34,19 @@ export class EditDetailsComponent implements OnInit {
       console.log('in for', user[i], this.service.token); // For Testing purposes only
       if (this.service.token === user[i].email) {
         console.log('in if', user[i]); // For Testing purposes only
+        if (name !== '') {
         user[i].name = name;
+        }
+        if (phone) {
         user[i].phone = phone ;
+        }
+        if (password !== '') {
         user[i].password = password;
+        }
+        if (dob) {
+        user[i].dob = dob;
+        }
+        alert('Values updated successfully !');
         break;
       }
   }
